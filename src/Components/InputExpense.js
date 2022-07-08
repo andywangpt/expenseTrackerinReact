@@ -1,7 +1,5 @@
 import React from 'react'
 import { useState } from "react"
-//import Button from 'react-bootstrap/Button'
-
 
 export default function InputExpense(props) {
 
@@ -10,20 +8,25 @@ export default function InputExpense(props) {
     location: "",
     amount: "",
     date: "",
-    id: Date.now()
+    id: ""
   })
 
   const handleChange = (e) => {
     setExpense(prevExpense => {
       return {
         ...prevExpense, 
-        [e.target.name]: e.target.value,
+        [e.target.name]: e.target.value
       }
     })
   }
 
   function handleSubmit (e) {
     e.preventDefault()
+    setExpense(prevExpense => {
+      return {
+        ...prevExpense,
+        id: Date.now()
+    }})
     props.setExpenseList((prevExpenseList) => [...prevExpenseList, expense])
   }
     

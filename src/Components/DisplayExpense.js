@@ -1,6 +1,4 @@
 import React from 'react'
-import { useState } from "react"
-//import InputExpense from './InputExpense'
 
 export default function DisplayExpense(props) {
 
