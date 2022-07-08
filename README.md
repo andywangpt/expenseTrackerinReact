@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# expenseTrackerinReact
+
 An Expense Tracker (React)
 
 A simple expense tracker written in React with Bootstrap.
